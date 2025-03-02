@@ -29,3 +29,15 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+# Test 05: Test multiplication on small examples
+if [[ $($CALCULATOR 2 * 15) -ne 30 ]]; then  # If the return code of $PROGRAM is zero (i.e. success)...
+  echo 'ERROR! A valid run of the calculator (2 * 15) failed to produce 30 as an output!'
+  exit 1
+fi
+
+# Test 06: Test division on small examples
+if [[ $($CALCULATOR 20 / 2) -ne 10 ]]; then  # If the return code of $PROGRAM is zero (i.e. success)...
+  echo 'ERROR! A valid run of the calculator (20 / 2) failed to produce 10 as an output!'
+  exit 1
+fi
