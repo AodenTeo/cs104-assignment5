@@ -41,3 +41,9 @@ if [[ $($CALCULATOR 20 / 2) -ne 10 ]]; then  # If the return code of $PROGRAM is
   echo 'ERROR! A valid run of the calculator (20 / 2) failed to produce 10 as an output!'
   exit 1
 fi
+
+# Test 07: Test division on small examples
+if [[ $($CALCULATOR 20 - 2) -ne 18 ]]; then  # If the return code of $PROGRAM is zero (i.e. success)...
+  echo 'ERROR! A valid run of the calculator (20 - 2) failed to produce 18 as an output!'
+  exit 1
+fi
